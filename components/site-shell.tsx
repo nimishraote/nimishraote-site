@@ -37,12 +37,12 @@ export function SiteShell() {
             </div>
           </div>
 
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-200">
+          <nav className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm text-slate-200">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="transition hover:text-white"
+                className="inline-flex items-center transition hover:text-white"
               >
                 {item.label}
               </a>
@@ -108,13 +108,13 @@ export function SiteShell() {
 
       <section
         id="about"
-        className="relative overflow-hidden border-t border-white/10 bg-[#181325]"
+        className="relative overflow-hidden border-t border-white/10 bg-[#171222]"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(168,85,247,0.10),_transparent_25%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.10),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.08),_transparent_20%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(168,85,247,0.12),_transparent_26%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.10),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.09),_transparent_24%),radial-gradient(circle_at_center,_rgba(244,114,182,0.07),_transparent_28%)]" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
           <div className="grid gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-start">
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.22)] backdrop-blur">
-              <div className="mx-auto max-w-[320px] overflow-hidden rounded-[1.5rem]">
+            <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.22)] backdrop-blur">
+              <div className="mx-auto max-w-[320px] overflow-hidden rounded-[1.5rem] ring-1 ring-amber-300/20">
                 <Image
                   src="/nimish.jpg"
                   alt="Nimish Raote portrait"
@@ -126,7 +126,7 @@ export function SiteShell() {
             </div>
 
             <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
                 About
               </div>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -150,9 +150,10 @@ export function SiteShell() {
 
                 <p>
                   I am originally from India and now live in Hoboken with my wife, daughter, and our cat
-                  Theo. I enjoy mobile games, Xbox, travel, and soaking in different cultures, places,
-                  and ways of living. A lot of what inspires me comes from that mix of systems thinking,
-                  curiosity, and everyday life.
+                  Theo, who very much has his own personality. Outside of work, I enjoy mobile games,
+                  Xbox, travel, and getting a feel for different cultures, places, and rhythms of life.
+                  A lot of what inspires me comes from that blend of curiosity, systems thinking, and
+                  the small details of everyday life.
                 </p>
               </div>
             </div>
@@ -162,12 +163,12 @@ export function SiteShell() {
 
       <section
         id="apps"
-        className="relative overflow-hidden border-t border-white/10 bg-[#120f1e]"
+        className="relative overflow-hidden border-t border-white/10 bg-[#140f20]"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.12),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.10),_transparent_24%),radial-gradient(circle_at_center,_rgba(168,85,247,0.10),_transparent_30%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_24%),radial-gradient(circle_at_center,_rgba(168,85,247,0.10),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.07),_transparent_22%)]" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
           <div className="max-w-3xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Apps
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -183,9 +184,9 @@ export function SiteShell() {
             {apps.map((app) => (
               <div
                 key={app.name}
-                className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur"
+                className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur"
               >
-                <div className="h-44 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)] p-6">
+                <div className="h-44 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)] p-6">
                   <div className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
                     Featured App
                   </div>
@@ -216,8 +217,8 @@ export function SiteShell() {
               </div>
             ))}
 
-            <div className="rounded-[2rem] border border-dashed border-white/15 bg-white/5 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+            <div className="rounded-[2rem] border border-dashed border-white/15 bg-gradient-to-br from-white/7 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
                 Coming Next
               </div>
               <div className="mt-3 text-2xl font-bold text-white">More apps coming soon</div>
@@ -242,12 +243,12 @@ export function SiteShell() {
 
       <section
         id="thoughts"
-        className="relative overflow-hidden border-t border-white/10 bg-[#191428]"
+        className="relative overflow-hidden border-t border-white/10 bg-[#1a1427]"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.08),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(249,115,22,0.08),_transparent_28%),radial-gradient(circle_at_center,_rgba(236,72,153,0.06),_transparent_28%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(14,165,233,0.08),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(249,115,22,0.09),_transparent_28%),radial-gradient(circle_at_center,_rgba(236,72,153,0.07),_transparent_28%),radial-gradient(circle_at_top_left,_rgba(251,191,36,0.06),_transparent_20%)]" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
           <div className="max-w-3xl">
-            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Thoughts
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -263,9 +264,9 @@ export function SiteShell() {
             {comingSoonThoughts.map((item, index) => (
               <div
                 key={item}
-                className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
+                className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
               >
-                <div className="text-sm font-semibold text-amber-300">0{index + 1}</div>
+                <div className="text-sm font-semibold text-rose-300">0{index + 1}</div>
                 <div className="mt-3 text-xl font-bold text-white">{item}</div>
                 <p className="mt-3 text-sm leading-7 text-slate-300">Coming soon.</p>
               </div>
@@ -278,11 +279,11 @@ export function SiteShell() {
         id="contact"
         className="relative overflow-hidden border-t border-white/10 bg-[#0b1020]"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_22%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.10),_transparent_22%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_22%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_22%),radial-gradient(circle_at_center,_rgba(244,114,182,0.08),_transparent_20%)]" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
           <div className="grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-start">
             <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
                 Contact
               </div>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -294,7 +295,7 @@ export function SiteShell() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 backdrop-blur">
               <div className="space-y-4 text-sm text-slate-200">
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-slate-400">Email</div>
@@ -314,7 +315,7 @@ export function SiteShell() {
                     rel="noreferrer"
                     className="mt-1 inline-block text-base text-white hover:text-sky-300"
                   >
-                    View LinkedIn Profile
+                    Connect on LinkedIn
                   </a>
                 </div>
               </div>
