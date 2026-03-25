@@ -18,13 +18,13 @@ const thoughtTeasers = [
     href: "/thoughts",
   },
   {
-    title: "Why focused AI products may win",
-    note: "Still in the lab.",
+    title: "Why Building Small Things Still Matters, Even for Leaders",
+    note: "Now live.",
     href: "/thoughts",
   },
   {
-    title: "From operator to builder",
-    note: "Work in progress, with strong opinions forming.",
+    title: "More thoughts coming soon",
+    note: "Still taking shape.",
     href: "/thoughts",
   },
 ];
