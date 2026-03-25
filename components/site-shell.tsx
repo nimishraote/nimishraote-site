@@ -10,11 +10,24 @@ const apps = [
   },
 ];
 
+const article = {
+  title: "What Building My First AI App Taught Me",
+  intro:
+    "The world is changing very fast right now. AI is starting to reshape how people work, create, solve problems, and build businesses. I wanted to understand that shift in a real way, not just by using tools casually, but by building something myself.",
+  sections: [
+    "Throughout my career, I have often been drawn to moments where something needed to be built from scratch. Not just managed once it existed, but shaped early, when there was still ambiguity and when the right systems, structure, and direction had to be created.",
+    "At TikTok, I had the chance to help build the operating foundations at a time when the business was still scaling quickly and many things were still taking shape. What always interested me most was not process for its own sake. It was how to design an operating model that could support growth, bring clarity to complexity, and help teams move with more focus and confidence. For me, that kind of work has always been strategic. It is about seeing what needs to exist before it fully exists, then helping build it in a way that can scale.",
+    "I saw something similar earlier in my career at Ogilvy, when I helped lead and launch the first major tech project at an advertising agency that had never launched something of that scale before. The project was TimeWarnerCable.com, which was later taken over by Charter Communications. It was a high-scale and high-visibility program, and it required real depth in technology, product thinking, and execution. That experience stayed with me because it showed me that complex systems can be built successfully even in places not known for engineering, if the right leadership, structure, and learning mindset are in place.",
+    "That same instinct came back to me with AI. I realized that if I truly wanted to understand where this world is going, it was not enough to only prompt models or experiment casually. I wanted to build a real product from scratch. Something simple, public-facing, and useful. That is what led me to build InsightLens.",
+    "What surprised me most was how energizing the process felt. In building it, old technical muscles started waking up again. Earlier in my career, I had worked much closer to technology and code. Over time, as my roles became more centered on business leadership, scale, and strategy, that layer became quieter. It never disappeared, but it definitely went dormant. This project brought it back to life.",
+    "I had to think through the architecture from the ground up. How the front end would work. How the app would be deployed. How the code would be managed in GitHub. How Vercel, Supabase, and the OpenAI platform would connect to each other. How information would move through the system, from user input to model response to app output. How to make the product simple on the surface while keeping the structure underneath clean and reliable. It was not about building something huge. It was about building something real and learning by doing.",
+    "That process reminded me of something important. A lot of growth comes from stepping back into spaces where you are no longer fully fluent, but willing to learn again. It made me feel lively, stretched, and honestly more playful than I have felt in a while. There was something deeply satisfying about moving from idea to working product, and seeing that what looked intimidating at first became manageable once I committed to it step by step.",
+    "This project is small in the grand scheme of things, but it meant a lot to me. It reminded me that I do not have to choose between strategic leadership and building. The two can feed each other. In many ways, the same mindset that helps build organizations and operating systems can also help build products.",
+    "More than anything, this feels like a beginning. Building this first app has inspired me to do much more in this space. Not because I want to suddenly become something I am not, but because I can feel how important this shift is, and I want to engage with it in a real way. I want to keep learning, keep building, and keep exploring what becomes possible when strategy, technology, and curiosity come together.",
+  ],
+};
+
 const thoughtTeasers = [
-  {
-    title: "What building my first AI app taught me",
-    note: "This one is simmering.",
-  },
   {
     title: "Why focused AI products may win",
     note: "Still in the lab.",
@@ -248,26 +261,47 @@ export function SiteShell() {
               Thoughts
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Writing and reflections are in the works.
+              Notes and reflections from building, learning, and staying curious.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              I am still cooking on this section. Over time it will hold notes, ideas, observations,
-              and the occasional opinion across work, products, AI, culture, and whatever else catches
-              my attention.
+              A few thoughts are starting to take shape. This section will slowly grow into a place for
+              writing about products, technology, work, and whatever else I find worth exploring.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {thoughtTeasers.map((item, index) => (
-              <div
-                key={item.title}
-                className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
-              >
-                <div className="text-sm font-semibold text-rose-300">0{index + 1}</div>
-                <div className="mt-3 text-xl font-bold text-white">{item.title}</div>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{item.note}</p>
+          <div className="mt-10 grid gap-6">
+            <article className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur sm:p-8">
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
+                Article 01
               </div>
-            ))}
+              <h3 className="mt-3 max-w-3xl text-2xl font-bold text-white sm:text-3xl">
+                {article.title}
+              </h3>
+              <p className="mt-5 max-w-4xl text-base leading-8 text-slate-300">
+                {article.intro}
+              </p>
+
+              <div className="mt-8 space-y-5 text-base leading-8 text-slate-300">
+                {article.sections.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </article>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {thoughtTeasers.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
+                >
+                  <div className="text-sm font-semibold text-rose-300">
+                    0{index + 2}
+                  </div>
+                  <div className="mt-3 text-xl font-bold text-white">{item.title}</div>
+                  <p className="mt-3 text-sm leading-7 text-slate-300">{item.note}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
