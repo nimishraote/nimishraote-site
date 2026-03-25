@@ -10,10 +10,19 @@ const apps = [
   },
 ];
 
-const comingSoonThoughts = [
-  "What building my first AI app taught me",
-  "Why focused AI products may win",
-  "From operator to builder",
+const thoughtTeasers = [
+  {
+    title: "What building my first AI app taught me",
+    note: "This one is simmering.",
+  },
+  {
+    title: "Why focused AI products may win",
+    note: "Still in the lab.",
+  },
+  {
+    title: "From operator to builder",
+    note: "Work in progress, with strong opinions forming.",
+  },
 ];
 
 const navItems = [
@@ -27,27 +36,29 @@ export function SiteShell() {
   return (
     <main className="min-h-screen bg-[#120f1e] text-slate-100">
       <header className="sticky top-0 z-30 border-b border-white/10 bg-[#0b1020]/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-          <div className="min-w-0">
-            <div className="bg-gradient-to-r from-sky-300 via-cyan-200 to-violet-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent">
-              Nimish Raote
+        <div className="mx-auto max-w-6xl px-5 py-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="min-w-0">
+              <div className="bg-gradient-to-r from-sky-300 via-cyan-200 to-violet-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent">
+                Nimish Raote
+              </div>
+              <div className="text-sm text-slate-300">
+                Operator, builder, and curious explorer
+              </div>
             </div>
-            <div className="text-sm text-slate-300">
-              Operator, builder, and curious explorer
-            </div>
-          </div>
 
-          <nav className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm text-slate-200">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="inline-flex items-center transition hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+            <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-200 sm:justify-end">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex items-center transition hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
       </header>
 
@@ -86,21 +97,6 @@ export function SiteShell() {
               >
                 About Me
               </a>
-            </div>
-
-            <div className="mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <div className="text-2xl font-bold text-white">1</div>
-                <div className="mt-1 text-sm text-slate-300">Live public app</div>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <div className="text-2xl font-bold text-white">More</div>
-                <div className="mt-1 text-sm text-slate-300">Ideas and experiments to come</div>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <div className="text-2xl font-bold text-white">Side</div>
-                <div className="mt-1 text-sm text-slate-300">Built with curiosity and craft</div>
-              </div>
             </div>
           </div>
         </div>
@@ -252,23 +248,24 @@ export function SiteShell() {
               Thoughts
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Writing and reflections are coming soon.
+              Writing and reflections are in the works.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              This section will grow over time with notes, ideas, and reflections across work, products,
-              AI, culture, and whatever else I find worth thinking about.
+              I am still cooking on this section. Over time it will hold notes, ideas, observations,
+              and the occasional opinion across work, products, AI, culture, and whatever else catches
+              my attention.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {comingSoonThoughts.map((item, index) => (
+            {thoughtTeasers.map((item, index) => (
               <div
-                key={item}
+                key={item.title}
                 className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
               >
                 <div className="text-sm font-semibold text-rose-300">0{index + 1}</div>
-                <div className="mt-3 text-xl font-bold text-white">{item}</div>
-                <p className="mt-3 text-sm leading-7 text-slate-300">Coming soon.</p>
+                <div className="mt-3 text-xl font-bold text-white">{item.title}</div>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{item.note}</p>
               </div>
             ))}
           </div>
