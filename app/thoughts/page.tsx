@@ -3,6 +3,7 @@ import Link from "next/link";
 const articles = [
   {
     number: "01",
+    id: "article-01",
     title: "What Building My First AI App Taught Me",
     intro:
       "The world is changing very fast right now. AI is starting to reshape how people work, create, solve problems, and build businesses. I wanted to understand that shift in a real way, not just by using tools casually, but by building something myself.",
@@ -20,6 +21,7 @@ const articles = [
   },
   {
     number: "02",
+    id: "article-02",
     title: "Why Building Small Things Still Matters, Even for Leaders",
     intro:
       "As leaders get more senior, it is natural to spend less time making things directly. The work shifts toward strategy, decisions, alignment, team building, and scale. That is part of leadership. But something important can get lost when leaders move too far away from building. Making small things keeps judgment sharp. It reconnects strategy with reality. And in many cases, it makes leadership stronger, not smaller.",
@@ -34,7 +36,23 @@ const articles = [
   },
 ];
 
-const moreThoughts = ["More thoughts coming soon"];
+const sideNavArticles = [
+  {
+    number: "01",
+    title: "What Building My First AI App Taught Me",
+    href: "#article-01",
+  },
+  {
+    number: "02",
+    title: "Why Building Small Things Still Matters, Even for Leaders",
+    href: "#article-02",
+  },
+  {
+    number: "03",
+    title: "More thoughts coming soon",
+    href: "#more-coming",
+  },
+];
 
 export default function ThoughtsPage() {
   return (
@@ -82,7 +100,8 @@ export default function ThoughtsPage() {
             {articles.map((article) => (
               <article
                 key={article.number}
-                className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur sm:p-8"
+                id={article.id}
+                className="scroll-mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur sm:p-8"
               >
                 <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
                   Article {article.number}
@@ -97,19 +116,35 @@ export default function ThoughtsPage() {
                 </div>
               </article>
             ))}
+
+            <section
+              id="more-coming"
+              className="scroll-mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
+            >
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
+                03
+              </div>
+              <div className="mt-3 text-xl font-bold text-white">More thoughts coming soon</div>
+              <div className="mt-3 text-sm leading-7 text-slate-300">
+                More writing is on the way.
+              </div>
+            </section>
           </div>
 
-          <aside className="h-fit rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur">
+          <aside className="h-fit rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur lg:sticky lg:top-24">
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
-              More to come
+              Navigate
             </div>
             <div className="mt-4 space-y-4">
-              {moreThoughts.map((item, index) => (
-                <div key={item} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <div className="text-sm font-semibold text-amber-300">0{index + 3}</div>
-                  <div className="mt-2 text-base font-semibold text-white">{item}</div>
-                  <div className="mt-2 text-sm text-slate-300">In progress.</div>
-                </div>
+              {sideNavArticles.map((item) => (
+                <a
+                  key={item.number}
+                  href={item.href}
+                  className="block rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
+                >
+                  <div className="text-sm font-semibold text-amber-300">{item.number}</div>
+                  <div className="mt-2 text-base font-semibold text-white">{item.title}</div>
+                </a>
               ))}
             </div>
           </aside>

@@ -15,12 +15,12 @@ const thoughtTeasers = [
   {
     title: "What Building My First AI App Taught Me",
     note: "Now live.",
-    href: "/thoughts",
+    href: "/thoughts#article-01",
   },
   {
     title: "Why Building Small Things Still Matters, Even for Leaders",
     note: "Now live.",
-    href: "/thoughts",
+    href: "/thoughts#article-02",
   },
   {
     title: "More thoughts coming soon",
