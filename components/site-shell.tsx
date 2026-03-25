@@ -7,7 +7,7 @@ const apps = [
     description:
       "AI chart and graph analysis made simple. Upload a chart image and get clear insights, unusual points, and smart follow-up questions.",
     stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
-    liveHref: "https://insightlens-akg9ozn38-nimishraotes-projects.vercel.app/",
+    liveHref: "https://insightlens-red.vercel.app/",
   },
 ];
 
