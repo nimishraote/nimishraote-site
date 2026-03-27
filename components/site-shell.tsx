@@ -4,10 +4,19 @@ import Link from "next/link";
 const apps = [
   {
     name: "InsightLens",
+    badge: "Featured App",
     description:
       "AI chart and graph analysis made simple. Upload a chart image and get clear insights, unusual points, and smart follow-up questions.",
     stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
     liveHref: "https://insightlens-red.vercel.app/",
+  },
+  {
+    name: "You Are the COO",
+    badge: "New App",
+    description:
+      "A decision-based executive simulation where you run Northstar Cloud through high-pressure choices across clients, budgets, people, product launches, and risk.",
+    stack: "Next.js, Vercel, GitHub, Framer Motion",
+    liveHref: "https://you-are-the-coo.vercel.app/",
   },
 ];
 
@@ -185,20 +194,26 @@ export function SiteShell() {
               A growing portfolio of public-facing experiments and tools.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              Some are practical. Some are exploratory. All of them come from a place of curiosity,
-              usefulness, and wanting to make something real.
+              Some are practical. Some are playful. All of them come from curiosity, usefulness,
+              and the desire to build something real.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {apps.map((app) => (
+            {apps.map((app, index) => (
               <div
                 key={app.name}
                 className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur"
               >
-                <div className="h-44 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)] p-6">
+                <div
+                  className={`h-44 p-6 ${
+                    index === 0
+                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)]"
+                      : "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.20),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
+                  }`}
+                >
                   <div className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
-                    Featured App
+                    {app.badge}
                   </div>
                   <div className="mt-6 max-w-sm text-3xl font-bold text-white">{app.name}</div>
                 </div>
