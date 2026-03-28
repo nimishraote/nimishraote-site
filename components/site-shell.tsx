@@ -24,17 +24,17 @@ const thoughtTeasers = [
   {
     title: "What Building My First AI App Taught Me",
     note: "Now live.",
-    href: "/thoughts#article-01",
+    href: "/thoughts/what-building-my-first-ai-app-taught-me",
   },
   {
     title: "Why Building Small Things Still Matters, Even for Leaders",
     note: "Now live.",
-    href: "/thoughts#article-02",
+    href: "/thoughts/why-building-small-things-still-matters-even-for-leaders",
   },
   {
     title: "The Hidden Job of Leadership Is Looking Calmer Than You Feel",
     note: "Now live.",
-    href: "/thoughts#article-03",
+    href: "/thoughts/the-hidden-job-of-leadership-is-looking-calmer-than-you-feel",
   },
 ];
 
