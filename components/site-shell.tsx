@@ -32,9 +32,9 @@ const thoughtTeasers = [
     href: "/thoughts#article-02",
   },
   {
-    title: "More thoughts coming soon",
-    note: "Still taking shape.",
-    href: "/thoughts",
+    title: "The Hidden Job of Leadership Is Looking Calmer Than You Feel",
+    note: "Now live.",
+    href: "/thoughts#article-03",
   },
 ];
 
