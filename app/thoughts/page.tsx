@@ -34,6 +34,35 @@ const articles = [
       "Leadership is not only about setting direction from above. It is also about staying close enough to the work to understand what is changing, what is hard, and what is possible. Building small things is one way to do that. It keeps leadership real.",
     ],
   },
+  {
+    number: "03",
+    id: "article-03",
+    title: "The Hidden Job of Leadership Is Looking Calmer Than You Feel",
+    intro:
+      "People sometimes tell me I seem calm in meetings. This is generous. What is actually happening is that I am trying very hard not to make things worse.",
+    sections: [
+      "That may be one of the least discussed parts of leadership. People imagine leadership is about vision, decisions, and confidence. Sometimes it is. But a surprising amount of it is emotional damage control. Your job is not always to solve the problem instantly. Sometimes your job is simply to stop the room from becoming a second problem.",
+      "I saw this a lot while working on Joint Business Partnerships, or JBPs, with clients.",
+      "There is a very specific kind of meeting I have sat in many times. A client is underpacing. The incentives are not working. Everyone arrives with a different theory about why. One person thinks the client is moving too slowly. Another thinks sales is not pushing hard enough. Someone else says the product is not meeting the client’s needs. Then someone suggests throwing more money at the problem, and you hear the long sigh from finance.",
+      "By the middle of the meeting, the truth usually appears: the incentives are not working because five things are slightly broken at the same time.",
+      "This is where the jargon begins to earn its salary.",
+      "You lean forward slightly. You lower your voice by ten percent. You begin speaking fluent executive.",
+      "Let us take a step back. Let us look at the bigger picture. Let us level set. Let us circle back on the core issue. Let us focus on the low-hanging fruit.",
+      "Meanwhile, your actual thoughts are much less premium: Does this incentive even solve the client’s real problem? Did we understand what they wanted in the first place? Why is this only being said now? Who actually owns fixing it? And can I keep the room engaged before everyone starts studying their laptops like they are sacred texts?",
+      "People think calm leaders are calm because they feel calm.",
+      "No.",
+      "Often they are calm because they know panic is contagious.",
+      "So a lot of leadership becomes translation.",
+      "The private thought is: This is bad.",
+      "The public version is: Okay, here is how we are going to work through it.",
+      "At work, this apparently reads as calm. My wife would find that extremely surprising. If you asked her whether I move through life with serene executive composure, I believe her first response would be laughter, followed almost immediately by a short but devastating list of counterexamples.",
+      "Then, once in a blue moon, if you do it well, someone says, “You are always so calm.”",
+      "And you think, thank you, but that is mostly because I did not want the rest of you to see the fire trucks with their sirens blazing at breakneck speed inside my head.",
+      "So yes, people may think I am calm.",
+      "Usually I am just trying to be calm enough that the team does not get more worried than it needs to be.",
+      "That may be one of the hidden jobs of leadership: absorbing just enough pressure that other people can still think.",
+    ],
+  },
 ];
 
 const sideNavArticles = [
@@ -49,6 +78,11 @@ const sideNavArticles = [
   },
   {
     number: "03",
+    title: "The Hidden Job of Leadership Is Looking Calmer Than You Feel",
+    href: "#article-03",
+  },
+  {
+    number: "04",
     title: "More thoughts coming soon",
     href: "#more-coming",
   },
@@ -122,7 +156,7 @@ export default function ThoughtsPage() {
               className="scroll-mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
             >
               <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
-                03
+                04
               </div>
               <div className="mt-3 text-xl font-bold text-white">More thoughts coming soon</div>
               <div className="mt-3 text-sm leading-7 text-slate-300">
