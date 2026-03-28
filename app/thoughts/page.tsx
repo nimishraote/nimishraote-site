@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ReactionBar } from "../../components/reaction-bar";
+
 const articles = [
   {
     number: "01",
@@ -148,6 +150,8 @@ export default function ThoughtsPage() {
                     <p key={paragraph}>{paragraph}</p>
                   ))}
                 </div>
+
+                <ReactionBar articleId={article.id} />
               </article>
             ))}
 
@@ -155,13 +159,9 @@ export default function ThoughtsPage() {
               id="more-coming"
               className="scroll-mt-24 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.20)] backdrop-blur"
             >
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
-                04
-              </div>
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">04</div>
               <div className="mt-3 text-xl font-bold text-white">More thoughts coming soon</div>
-              <div className="mt-3 text-sm leading-7 text-slate-300">
-                More writing is on the way.
-              </div>
+              <div className="mt-3 text-sm leading-7 text-slate-300">More writing is on the way.</div>
             </section>
           </div>
 
