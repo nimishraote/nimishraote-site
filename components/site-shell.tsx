@@ -3,18 +3,26 @@ import Link from "next/link";
 
 const apps = [
   {
-    name: "InsightLens",
-    badge: "Featured App",
+    name: "MoneyWise",
+    badge: "Live App",
     description:
-      "AI chart and graph analysis made simple. Upload a chart image and get clear insights, unusual points, and smart follow-up questions.",
+      "An AI powered financial literacy app for young adults. It helps users understand money in simple language, build a personalized starting plan, and learn through guided lessons and practical next steps.",
+    stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
+    liveHref: "https://moneywise-mzo6.vercel.app/",
+  },
+  {
+    name: "InsightLens",
+    badge: "Live App",
+    description:
+      "AI chart and graph analysis made simple. Upload a chart image and get clear insights, unusual points, and smart follow up questions.",
     stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
     liveHref: "https://insightlens-red.vercel.app/",
   },
   {
     name: "You Are the COO",
-    badge: "New App",
+    badge: "Live App",
     description:
-      "A decision-based executive simulation where you run Northstar Cloud through high-pressure choices across clients, budgets, people, product launches, and risk.",
+      "A decision based executive simulation where you run Northstar Cloud through high pressure choices across clients, budgets, people, product launches, and risk.",
     stack: "Next.js, Vercel, GitHub, Framer Motion",
     liveHref: "https://you-are-the-coo.vercel.app/",
   },
@@ -155,7 +163,7 @@ export function SiteShell() {
               <div className="mt-6 space-y-5 text-base leading-8 text-slate-300">
                 <p>
                   Professionally, I have spent years working across technology, operations, strategy,
-                  and large-scale business leadership. My path has included Microsoft, Ogilvy, and now
+                  and large scale business leadership. My path has included Microsoft, Ogilvy, and now
                   TikTok, where I spend my time running business operations and helping complex systems
                   work better at scale.
                 </p>
@@ -191,7 +199,7 @@ export function SiteShell() {
               Apps
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              A growing portfolio of public-facing experiments and tools.
+              A growing portfolio of public facing experiments and tools.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
               Some are practical. Some are playful. All of them come from curiosity, usefulness,
@@ -208,6 +216,8 @@ export function SiteShell() {
                 <div
                   className={`h-44 p-6 ${
                     index === 0
+                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.22),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
+                      : index === 1
                       ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)]"
                       : "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.20),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
                   }`}
@@ -318,49 +328,27 @@ export function SiteShell() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_22%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_22%),radial-gradient(circle_at_center,_rgba(244,114,182,0.08),_transparent_20%)]" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
-          <div className="grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-start">
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
-                Contact
-              </div>
-              <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Let us connect.
-              </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-                If you would like to connect, discuss ideas, or simply say hello, feel free to reach
-                out.
-              </p>
+          <div className="max-w-3xl">
+            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+              Contact
             </div>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Say hello
+            </h2>
+            <p className="mt-5 text-base leading-8 text-slate-300">
+              The easiest place to reach me is on LinkedIn.
+            </p>
 
-            <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 backdrop-blur">
-              <div className="space-y-4 text-sm text-slate-200">
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-400">Email</div>
-                  <a
-                    href="mailto:nimishar@hotmail.com"
-                    className="mt-1 inline-block text-base text-white hover:text-sky-300"
-                  >
-                    nimishar@hotmail.com
-                  </a>
-                </div>
-
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-slate-400">LinkedIn</div>
-                  <a
-                    href="https://www.linkedin.com/in/nimish-raote-1342697/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-block text-base text-white hover:text-sky-300"
-                  >
-                    Connect on LinkedIn
-                  </a>
-                </div>
-              </div>
+            <div className="mt-8">
+              <a
+                href="https://www.linkedin.com/in/nimishraote/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+              >
+                Connect on LinkedIn
+              </a>
             </div>
-          </div>
-
-          <div className="mt-12 border-t border-white/10 pt-6 text-sm text-slate-400">
-            Nimish Raote · Work, ideas, products, and side quests
           </div>
         </div>
       </section>
