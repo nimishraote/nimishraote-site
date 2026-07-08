@@ -162,25 +162,23 @@ export function SiteShell() {
 
               <div className="mt-6 space-y-5 text-base leading-8 text-slate-300">
                 <p>
-                  Professionally, I have spent years working across technology, operations, strategy,
-                  and large scale business leadership. My path has included Microsoft, Ogilvy, and now
-                  TikTok, where I spend my time running business operations and helping complex systems
-                  work better at scale.
+                  I have spent most of my career helping teams take big, messy goals and turn them into
+                  something that can actually run. I started at Microsoft, spent many years at Ogilvy,
+                  and now work at TikTok across business operations, strategy, and execution.
                 </p>
 
                 <p>
-                  Outside of work, I enjoy building things from scratch, exploring new ideas, and using
-                  technology in a more playful and creative way. That is part of what this site is for.
-                  It is not meant to be a formal corporate profile. It is more a living space for
-                  experiments, products, thoughts, and whatever I happen to be curious about next.
+                  This site is mostly a place for things I am building and thinking about. Some are work
+                  related. Some are personal. Some are just experiments because I wanted to see if I could
+                  make them.
                 </p>
 
                 <p>
-                  I am originally from India and now live in Hoboken with my wife, daughter, and our cat
-                  Theo, who very much has his own personality. Outside of work, I enjoy mobile games,
-                  Xbox, travel, and getting a feel for different cultures, places, and rhythms of life.
-                  A lot of what inspires me comes from that blend of curiosity, systems thinking, and
-                  the small details of everyday life.
+                  I grew up in India and now live in Hoboken with my wife, daughter, and our cat Theo,
+                  who very much has his own personality. Outside of work, I enjoy mobile games, Xbox,
+                  travel, and getting a feel for different cultures, places, and rhythms of life. A lot
+                  of what inspires me comes from that blend of curiosity, systems thinking, and the small
+                  details of everyday life.
                 </p>
               </div>
             </div>
