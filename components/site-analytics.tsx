@@ -109,7 +109,7 @@ export default function SiteAnalytics() {
           // Ignore malformed hrefs. The generic interaction event above is still captured.
         }
 
-        if (href === "#contact" || href.startsWith("mailto:")) {
+        if (href === "#contact" || href.startsWith("mailto:") || href.includes("linkedin.com/")) {
           capture("contact_interest", {
             source_label: label,
             section,
