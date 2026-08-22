@@ -339,7 +339,7 @@ export function SiteShell() {
 
             <div className="mt-8">
               <a
-                href="https://www.linkedin.com/in/nimishraote/"
+                href="https://www.linkedin.com/in/nimish-raote-1342697"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
