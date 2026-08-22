@@ -21,6 +21,13 @@ const thoughts = [
       "On emotional control, fluent executive language, and keeping the room from getting worse.",
     href: "/thoughts/the-hidden-job-of-leadership-is-looking-calmer-than-you-feel",
   },
+  {
+    number: "04",
+    title: "Treat the Business Like It Is Yours",
+    excerpt:
+      "What nearly six years at TikTok taught me about ownership, people, and the kind of impact that lasts.",
+    href: "/thoughts/treat-the-business-like-it-is-yours",
+  },
 ];
 
 export default function ThoughtsPage() {
