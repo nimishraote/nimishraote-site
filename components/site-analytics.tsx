@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import posthog from "posthog-js";
 
+const POSTHOG_PROJECT_TOKEN = "phc_qdV8n3ssv4kjMgCAbMyx5EwuUSDrNJAcAHipoGAJK9TG";
+const POSTHOG_HOST = "https://us.i.posthog.com";
+
 const PROJECTS: Record<string, string> = {
   "moneywise-mzo6.vercel.app": "MoneyWise",
   "insightlens-red.vercel.app": "InsightLens",
@@ -11,7 +14,6 @@ const PROJECTS: Record<string, string> = {
 };
 
 function capture(event: string, properties: Record<string, string | number | boolean> = {}) {
-  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
   posthog.capture(event, properties);
 }
 
@@ -26,11 +28,8 @@ export default function SiteAnalytics() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-    if (!key) return;
-
-    posthog.init(key, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
+    posthog.init(POSTHOG_PROJECT_TOKEN, {
+      api_host: POSTHOG_HOST,
       person_profiles: "identified_only",
       capture_pageview: false,
       capture_pageleave: true,
@@ -42,8 +41,6 @@ export default function SiteAnalytics() {
   }, []);
 
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
-
     capture("site_page_view", {
       path: pathname || "/",
       title: document.title,
@@ -51,8 +48,6 @@ export default function SiteAnalytics() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) return;
-
     const visitKey = "nimishraote_first_visit";
     const firstVisit = window.localStorage.getItem(visitKey);
     if (firstVisit) {
