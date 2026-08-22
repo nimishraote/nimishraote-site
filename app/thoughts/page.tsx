@@ -23,9 +23,9 @@ const thoughts = [
   },
   {
     number: "04",
-    title: "Treat the Business Like It Is Yours",
+    title: "What I’m Taking With Me From TikTok to Fanatics",
     excerpt:
-      "What nearly six years at TikTok taught me about ownership, people, and the kind of impact that lasts.",
+      "Reflections on leaving TikTok, what I am carrying forward, and the opportunity ahead at Fanatics.",
     href: "/thoughts/treat-the-business-like-it-is-yours",
   },
 ];
