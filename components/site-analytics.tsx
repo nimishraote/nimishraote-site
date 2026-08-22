@@ -41,8 +41,16 @@ export default function SiteAnalytics() {
   }, []);
 
   useEffect(() => {
+    const path = pathname || "/";
+
+    posthog.capture("$pageview", {
+      $current_url: window.location.href,
+      path,
+      title: document.title,
+    });
+
     capture("site_page_view", {
-      path: pathname || "/",
+      path,
       title: document.title,
     });
   }, [pathname]);
