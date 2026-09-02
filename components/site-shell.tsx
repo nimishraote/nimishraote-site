@@ -8,7 +8,7 @@ const apps = [
     description:
       "A personal sports hub that brings live scores, schedules, standings, news, tennis draws, cricket scorecards, streaming, tickets, and AI-powered sports context into one place.",
     stack: "Next.js, Vercel, Neon, GitHub, OpenAI",
-    liveHref: "https://sports-hq-nimishraotes-projects.vercel.app/",
+    liveHref: "https://sports.nimishraote.com/",
   },
   {
     name: "MoneyWise",
