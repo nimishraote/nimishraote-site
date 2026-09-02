@@ -3,6 +3,14 @@ import Link from "next/link";
 
 const apps = [
   {
+    name: "Sports HQ",
+    badge: "Live App",
+    description:
+      "A personal sports hub that brings live scores, schedules, standings, news, tennis draws, cricket scorecards, streaming, tickets, and AI-powered sports context into one place.",
+    stack: "Next.js, Vercel, Neon, GitHub, OpenAI",
+    liveHref: "https://sports-hq-nimishraotes-projects.vercel.app/",
+  },
+  {
     name: "MoneyWise",
     badge: "Live App",
     description:
@@ -214,8 +222,10 @@ export function SiteShell() {
                 <div
                   className={`h-44 p-6 ${
                     index === 0
-                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.22),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
+                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.34),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(139,92,246,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.20),_transparent_24%),linear-gradient(135deg,#07111f_0%,#101735_48%,#35152f_100%)]"
                       : index === 1
+                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.22),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
+                      : index === 2
                       ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)]"
                       : "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.20),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
                   }`}
