@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Nimish Raote", url: "https://nimishraote.com" }],
   creator: "Nimish Raote",
   keywords: ["Nimish Raote", "Sports HQ", "product builder", "AI apps", "operations", "strategy"],
-  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({
