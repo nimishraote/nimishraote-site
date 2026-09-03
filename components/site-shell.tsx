@@ -96,16 +96,17 @@ export function SiteShell() {
         <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-16 sm:pt-20">
           <div className="max-w-4xl">
             <div className="mb-4 inline-flex rounded-full border border-sky-400/30 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-sky-200">
-              Products, ideas, and experiments
+              Products, ideas, and thoughts
             </div>
 
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              A place for the things I build.
+              A place for what I build, explore, and write about.
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               I spend a lot of my time building teams and helping run large, multi-billion-dollar
-              businesses. Outside of that, I like building products, exploring ideas, and learning in public.
+              businesses. Outside of that, I like building products, exploring ideas, and sharing what I am
+              learning along the way.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
