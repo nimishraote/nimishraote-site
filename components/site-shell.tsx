@@ -5,29 +5,20 @@ const secondaryApps = [
   {
     name: "MoneyWise",
     description:
-      "An AI-powered financial literacy app that helps young adults build confidence with money through a personalized starting plan, guided lessons, and practical next steps.",
-    stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
+      "A financial literacy app for young adults, built to make money feel clearer and easier to act on.",
     liveHref: "https://moneywise-mzo6.vercel.app/",
-    imageAlt: "MoneyWise financial literacy app interface",
-    previewPosition: "top",
   },
   {
     name: "InsightLens",
     description:
-      "An AI visual analysis tool that turns charts and graphs into clear takeaways, unusual points, and useful follow-up questions.",
-    stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
+      "An AI tool that turns charts and graphs into clear takeaways and useful follow-up questions.",
     liveHref: "https://insightlens-red.vercel.app/",
-    imageAlt: "InsightLens chart analysis interface",
-    previewPosition: "center",
   },
   {
     name: "You Are the COO",
     description:
-      "A decision-based executive simulation where you run a company through high-pressure choices across clients, budgets, people, product launches, and risk.",
-    stack: "Next.js, Vercel, GitHub, Framer Motion",
+      "An executive simulation built around the tradeoffs and pressure of running a company.",
     liveHref: "https://you-are-the-coo.vercel.app/",
-    imageAlt: "You Are the COO executive simulation interface",
-    previewPosition: "bottom",
   },
 ];
 
@@ -113,8 +104,8 @@ export function SiteShell() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-              I spend a lot of my time building teams and operating large, complex businesses at global
-              scale. Outside of that, I like building products, exploring ideas, and learning in public.
+              I spend a lot of my time building teams and helping run large, multi-billion-dollar
+              businesses. Outside of that, I like building products, exploring ideas, and learning in public.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -166,7 +157,7 @@ export function SiteShell() {
                 <p>
                   I have spent most of my career helping teams take big, messy goals and turn them into
                   something that can actually run. I started at Microsoft, spent many years at Ogilvy,
-                  then TikTok, and now work at Fanatics across operating leadership, strategy, and execution.
+                  and now work at TikTok across business operations, strategy, and execution.
                 </p>
 
                 <p>
@@ -199,108 +190,113 @@ export function SiteShell() {
               Apps
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Products and experiments I have taken from idea to working app.
+              Things I have built
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              I build these to learn by doing, solve something useful, and understand what it takes to
-              turn an idea into a real product.
+              A mix of useful products and experiments I built because I wanted to learn by making them real.
             </p>
           </div>
 
-          <div className="mt-10 overflow-hidden rounded-[2.25rem] border border-sky-300/20 bg-gradient-to-br from-white/10 to-white/5 shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur">
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
-              <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-10">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
-                    Flagship project
-                  </span>
-                  <span className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
-                    Live
-                  </span>
-                </div>
-
-                <h3 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                  Sports HQ
-                </h3>
-                <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
-                  A personal sports platform that brings live scores, schedules, standings, news, tennis
-                  draws, cricket scorecards, streaming, tickets, and AI-powered sports context into one place.
-                </p>
-                <div className="mt-5 text-sm text-slate-400">
-                  Built with Next.js, Vercel, Neon, GitHub, and OpenAI
-                </div>
-
-                <div className="mt-7">
+          <div className="mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-[#07111f] shadow-[0_18px_70px_rgba(0,0,0,0.30)]">
+            <div className="relative aspect-[2.65/1] min-h-[250px] bg-[#07111f] lg:min-h-[430px]">
+              <img
+                src="https://sports.nimishraote.com/option1-athletes-hero.webp"
+                alt="Sports HQ athletes hero"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+              />
+              <div className="absolute inset-0 hidden bg-gradient-to-r from-[#07111f] via-[#07111f]/90 to-transparent lg:block" />
+              <div className="absolute inset-0 hidden items-center p-10 lg:flex">
+                <div className="max-w-[470px]">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
+                      Flagship project
+                    </span>
+                    <span className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                      Live
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-5xl font-bold tracking-tight text-white">Sports HQ</h3>
+                  <p className="mt-5 text-base leading-7 text-slate-200">
+                    A personal sports hub for live scores, schedules, standings, news, scorecards, and AI-powered context.
+                  </p>
                   <a
                     href="https://sports.nimishraote.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                    className="mt-7 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
                   >
                     Open Sports HQ
                   </a>
                 </div>
               </div>
+            </div>
 
+            <div className="border-t border-white/10 p-6 lg:hidden">
+              <div className="flex flex-wrap gap-2">
+                <span className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
+                  Flagship project
+                </span>
+                <span className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                  Live
+                </span>
+              </div>
+              <h3 className="mt-4 text-3xl font-bold text-white">Sports HQ</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">
+                A personal sports hub for live scores, schedules, standings, news, scorecards, and AI-powered context.
+              </p>
               <a
                 href="https://sports.nimishraote.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative min-h-[320px] overflow-hidden border-t border-white/10 bg-[#07111f] lg:min-h-[430px] lg:border-l lg:border-t-0"
-                aria-label="Open Sports HQ"
+                className="mt-5 inline-flex rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-slate-900"
               >
-                <img
-                  src="https://sports.nimishraote.com/option1-athletes-hero.webp"
-                  alt="Sports HQ athletes hero"
-                  className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.015]"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07111f]/35 via-transparent to-transparent" />
+                Open Sports HQ
               </a>
             </div>
           </div>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
             {secondaryApps.map((app) => (
               <article
                 key={app.name}
-                className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 shadow-[0_10px_35px_rgba(0,0,0,0.20)] backdrop-blur"
+                className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#171222] shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
               >
                 <a
                   href={app.liveHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="group block aspect-[16/9] overflow-hidden border-b border-white/10 bg-white"
+                  className="group relative block aspect-[16/10] overflow-hidden border-b border-white/10 bg-slate-950"
                   aria-label={`Open ${app.name}`}
                 >
-                  <div
-                    role="img"
-                    aria-label={app.imageAlt}
-                    className="h-full w-full bg-no-repeat transition duration-500 group-hover:scale-[1.02]"
+                  <iframe
+                    src={app.liveHref}
+                    title={`${app.name} app preview`}
+                    loading="lazy"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                    sandbox="allow-scripts allow-same-origin"
+                    className="pointer-events-none absolute left-0 top-0 border-0"
                     style={{
-                      backgroundImage: "url('/app-previews.webp')",
-                      backgroundSize: "100% 300%",
-                      backgroundPosition: `center ${app.previewPosition}`,
+                      width: "300%",
+                      height: "300%",
+                      transform: "scale(0.333333)",
+                      transformOrigin: "top left",
                     }}
                   />
+                  <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/5 transition group-hover:bg-white/[0.02]" />
                 </a>
 
                 <div className="p-5">
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
-                    Live app
-                  </div>
-                  <h3 className="mt-2 text-xl font-bold text-white">{app.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">{app.description}</p>
-                  <div className="mt-3 text-xs leading-5 text-slate-500">Built with {app.stack}</div>
-                  <div className="mt-5">
-                    <a
-                      href={app.liveHref}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm font-semibold text-sky-200 transition hover:text-white"
-                    >
-                      Open app →
-                    </a>
-                  </div>
+                  <h3 className="text-xl font-bold text-white">{app.name}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
+                  <a
+                    href={app.liveHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex text-sm font-semibold text-sky-200 transition hover:text-white"
+                  >
+                    Open app →
+                  </a>
                 </div>
               </article>
             ))}
