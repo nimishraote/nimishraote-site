@@ -1,38 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const apps = [
-  {
-    name: "Sports HQ",
-    badge: "Live App",
-    description:
-      "A personal sports hub that brings live scores, schedules, standings, news, tennis draws, cricket scorecards, streaming, tickets, and AI-powered sports context into one place.",
-    stack: "Next.js, Vercel, Neon, GitHub, OpenAI",
-    liveHref: "https://sports.nimishraote.com/",
-  },
+const secondaryApps = [
   {
     name: "MoneyWise",
-    badge: "Live App",
     description:
-      "An AI powered financial literacy app for young adults. It helps users understand money in simple language, build a personalized starting plan, and learn through guided lessons and practical next steps.",
+      "An AI-powered financial literacy app that helps young adults build confidence with money through a personalized starting plan, guided lessons, and practical next steps.",
     stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
     liveHref: "https://moneywise-mzo6.vercel.app/",
+    imageAlt: "MoneyWise financial literacy app interface",
+    previewPosition: "top",
   },
   {
     name: "InsightLens",
-    badge: "Live App",
     description:
-      "AI chart and graph analysis made simple. Upload a chart image and get clear insights, unusual points, and smart follow up questions.",
+      "An AI visual analysis tool that turns charts and graphs into clear takeaways, unusual points, and useful follow-up questions.",
     stack: "Next.js, Vercel, Supabase, GitHub, OpenAI",
     liveHref: "https://insightlens-red.vercel.app/",
+    imageAlt: "InsightLens chart analysis interface",
+    previewPosition: "center",
   },
   {
     name: "You Are the COO",
-    badge: "Live App",
     description:
-      "A decision based executive simulation where you run Northstar Cloud through high pressure choices across clients, budgets, people, product launches, and risk.",
+      "A decision-based executive simulation where you run a company through high-pressure choices across clients, budgets, people, product launches, and risk.",
     stack: "Next.js, Vercel, GitHub, Framer Motion",
     liveHref: "https://you-are-the-coo.vercel.app/",
+    imageAlt: "You Are the COO executive simulation interface",
+    previewPosition: "bottom",
   },
 ];
 
@@ -110,17 +105,16 @@ export function SiteShell() {
         <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-16 sm:pt-20">
           <div className="max-w-4xl">
             <div className="mb-4 inline-flex rounded-full border border-sky-400/30 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-sky-200">
-              Strategy, systems, products, and side quests
+              Products, ideas, and experiments
             </div>
 
             <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              A home for ideas, experiments, and products I build outside the day job.
+              A place for the things I build.
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-              I have spent my career building and running complex businesses at scale across operations,
-              strategy, technology, and commercial execution. This site is a more personal space for the
-              things I explore outside of work, including AI products, ideas, and creative side quests.
+              I spend a lot of my time building teams and operating large, complex businesses at global
+              scale. Outside of that, I like building products, exploring ideas, and learning in public.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -172,7 +166,7 @@ export function SiteShell() {
                 <p>
                   I have spent most of my career helping teams take big, messy goals and turn them into
                   something that can actually run. I started at Microsoft, spent many years at Ogilvy,
-                  and now work at TikTok across business operations, strategy, and execution.
+                  then TikTok, and now work at Fanatics across operating leadership, strategy, and execution.
                 </p>
 
                 <p>
@@ -205,81 +199,111 @@ export function SiteShell() {
               Apps
             </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              A growing portfolio of public facing experiments and tools.
+              Products and experiments I have taken from idea to working app.
             </h2>
             <p className="mt-5 text-base leading-8 text-slate-300">
-              Some are practical. Some are playful. All of them come from curiosity, usefulness,
-              and the desire to build something real.
+              I build these to learn by doing, solve something useful, and understand what it takes to
+              turn an idea into a real product.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {apps.map((app, index) => (
-              <div
-                key={app.name}
-                className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur"
-              >
-                <div
-                  className={`h-44 p-6 ${
-                    index === 0
-                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.34),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(139,92,246,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.20),_transparent_24%),linear-gradient(135deg,#07111f_0%,#101735_48%,#35152f_100%)]"
-                      : index === 1
-                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.22),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
-                      : index === 2
-                      ? "bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.35),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.24),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(244,114,182,0.18),_transparent_24%),linear-gradient(135deg,#0f172a_0%,#111827_40%,#312e81_100%)]"
-                      : "bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.28),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.20),_transparent_28%),radial-gradient(circle_at_top_right,_rgba(96,165,250,0.18),_transparent_24%),linear-gradient(135deg,#0b1320_0%,#111827_40%,#1f2937_100%)]"
-                  }`}
-                >
-                  <div className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
-                    {app.badge}
-                  </div>
-                  <div className="mt-6 max-w-sm text-3xl font-bold text-white">{app.name}</div>
+          <div className="mt-10 overflow-hidden rounded-[2.25rem] border border-sky-300/20 bg-gradient-to-br from-white/10 to-white/5 shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur">
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+              <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-10">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
+                    Flagship project
+                  </span>
+                  <span className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                    Live
+                  </span>
                 </div>
 
-                <div className="p-6">
-                  <p className="text-sm leading-7 text-slate-300">{app.description}</p>
-                  <div className="mt-4 text-sm text-slate-400">Built with {app.stack}</div>
+                <h3 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                  Sports HQ
+                </h3>
+                <p className="mt-5 max-w-xl text-base leading-8 text-slate-300">
+                  A personal sports platform that brings live scores, schedules, standings, news, tennis
+                  draws, cricket scorecards, streaming, tickets, and AI-powered sports context into one place.
+                </p>
+                <div className="mt-5 text-sm text-slate-400">
+                  Built with Next.js, Vercel, Neon, GitHub, and OpenAI
+                </div>
 
-                  <div className="mt-6 flex flex-wrap gap-3">
+                <div className="mt-7">
+                  <a
+                    href="https://sports.nimishraote.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                  >
+                    Open Sports HQ
+                  </a>
+                </div>
+              </div>
+
+              <a
+                href="https://sports.nimishraote.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative min-h-[320px] overflow-hidden border-t border-white/10 bg-[#07111f] lg:min-h-[430px] lg:border-l lg:border-t-0"
+                aria-label="Open Sports HQ"
+              >
+                <img
+                  src="https://sports.nimishraote.com/option1-athletes-hero.webp"
+                  alt="Sports HQ athletes hero"
+                  className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.015]"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07111f]/35 via-transparent to-transparent" />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {secondaryApps.map((app) => (
+              <article
+                key={app.name}
+                className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 shadow-[0_10px_35px_rgba(0,0,0,0.20)] backdrop-blur"
+              >
+                <a
+                  href={app.liveHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block aspect-[16/9] overflow-hidden border-b border-white/10 bg-white"
+                  aria-label={`Open ${app.name}`}
+                >
+                  <div
+                    role="img"
+                    aria-label={app.imageAlt}
+                    className="h-full w-full bg-no-repeat transition duration-500 group-hover:scale-[1.02]"
+                    style={{
+                      backgroundImage: "url('/app-previews.webp')",
+                      backgroundSize: "100% 300%",
+                      backgroundPosition: `center ${app.previewPosition}`,
+                    }}
+                  />
+                </a>
+
+                <div className="p-5">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                    Live app
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold text-white">{app.name}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{app.description}</p>
+                  <div className="mt-3 text-xs leading-5 text-slate-500">Built with {app.stack}</div>
+                  <div className="mt-5">
                     <a
                       href={app.liveHref}
                       target="_blank"
                       rel="noreferrer"
-                      className="rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                      className="text-sm font-semibold text-sky-200 transition hover:text-white"
                     >
-                      Live App
-                    </a>
-                    <a
-                      href="#contact"
-                      className="rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
-                    >
-                      Learn More
+                      Open app →
                     </a>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
-
-            <div className="rounded-[2rem] border border-dashed border-white/15 bg-gradient-to-br from-white/7 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.18)] backdrop-blur">
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-rose-300">
-                Coming Next
-              </div>
-              <div className="mt-3 text-2xl font-bold text-white">More apps coming soon</div>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                I am gradually building out a small portfolio over time. Some ideas are already taking
-                shape. Others are still just sketches in my head.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["ImageExplainer", "DecisionHelper", "TravelInterpreter"].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-medium text-slate-200"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
