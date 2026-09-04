@@ -21,3 +21,50 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/*
+ * Shared supporting-text scale.
+ * Keep page ledes, section ledes, body copy, card copy, and metadata distinct
+ * so every page uses the same visual hierarchy instead of ad-hoc text sizes.
+ */
+.site-page-lede {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.site-section-lede {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.site-body-copy {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.site-card-copy {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.site-meta-copy {
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .site-page-lede {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+
+  .site-section-lede {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .site-card-copy {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}

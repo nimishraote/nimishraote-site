@@ -61,7 +61,7 @@ export default function ThoughtsPage() {
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Notes on leadership, building, work, and curiosity.
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+            <p className="site-page-lede mt-6 max-w-3xl text-slate-300">
               A growing archive of writing on products, leadership, technology, and the parts of work
               that are harder to say in meetings.
             </p>
@@ -89,7 +89,7 @@ export default function ThoughtsPage() {
                       <h2 className="text-2xl font-bold tracking-tight text-white transition group-hover:text-sky-200 sm:text-3xl">
                         {thought.title}
                       </h2>
-                      <p className="mt-3 max-w-3xl text-base leading-8 text-slate-300">
+                      <p className="site-card-copy mt-3 max-w-3xl text-slate-300">
                         {thought.excerpt}
                       </p>
                       <div className="mt-4 text-sm font-semibold text-amber-300">

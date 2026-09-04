@@ -159,15 +159,15 @@ export function ReactionBar({ articleId }: ReactionBarProps) {
     <div className="mt-8 rounded-[1.5rem] border border-white/10 bg-white/5 p-4 sm:p-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <div className="text-sm font-semibold text-white">React to this article</div>
-          <div className="mt-1 text-sm text-slate-400">
+          <div className="site-meta-copy font-semibold text-white">React to this article</div>
+          <div className="site-meta-copy mt-1 text-slate-400">
             {hasReacted
               ? "Thanks. Your reaction has been counted."
               : "Pick one reaction. Everyone can see the totals."}
           </div>
         </div>
 
-        {isLoading ? <div className="text-sm text-slate-400">Loading reactions...</div> : null}
+        {isLoading ? <div className="site-meta-copy text-slate-400">Loading reactions...</div> : null}
       </div>
 
       <div className="mt-4 flex flex-wrap gap-3">
@@ -196,7 +196,7 @@ export function ReactionBar({ articleId }: ReactionBarProps) {
         })}
       </div>
 
-      {error ? <div className="mt-3 text-sm text-rose-300">{error}</div> : null}
+      {error ? <div className="site-meta-copy mt-3 text-rose-300">{error}</div> : null}
     </div>
   );
 }

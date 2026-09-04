@@ -57,7 +57,7 @@ export function SiteShell() {
               <div className="bg-gradient-to-r from-sky-300 via-cyan-200 to-violet-300 bg-clip-text text-2xl font-bold tracking-tight text-transparent">
                 Nimish Raote
               </div>
-              <div className="text-sm text-slate-300">
+              <div className="site-meta-copy text-slate-300">
                 Operator, builder, and curious explorer
               </div>
             </div>
@@ -103,7 +103,7 @@ export function SiteShell() {
               A place for what I build, explore, and write about.
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+            <p className="site-page-lede mt-6 max-w-3xl text-slate-300">
               I spend a lot of my time building teams and helping run large, multi-billion-dollar
               businesses. Outside of that, I like building products, exploring ideas, and sharing what I am
               learning along the way.
@@ -154,7 +154,7 @@ export function SiteShell() {
                 A little more about me
               </h2>
 
-              <div className="mt-6 space-y-5 text-base leading-8 text-slate-300">
+              <div className="site-body-copy mt-6 space-y-5 text-slate-300">
                 <p>
                   I have spent most of my career helping teams take big, messy goals and turn them into
                   something that can actually run. I started at Microsoft, spent many years at Ogilvy,
@@ -193,7 +193,7 @@ export function SiteShell() {
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Things I have built
             </h2>
-            <p className="mt-5 text-base leading-8 text-slate-300">
+            <p className="site-section-lede mt-5 text-slate-300">
               A mix of useful products and experiments I built because I wanted to learn by making them real.
             </p>
           </div>
@@ -217,7 +217,7 @@ export function SiteShell() {
                     </span>
                   </div>
                   <h3 className="mt-5 text-5xl font-bold tracking-tight text-white">Sports HQ</h3>
-                  <p className="mt-5 text-base leading-7 text-slate-200">
+                  <p className="site-card-copy mt-5 text-slate-200">
                     A personal sports hub for live scores, schedules, standings, news, scorecards, and AI-powered context.
                   </p>
                   <a
@@ -242,7 +242,7 @@ export function SiteShell() {
                 </span>
               </div>
               <h3 className="mt-4 text-3xl font-bold text-white">Sports HQ</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">
+              <p className="site-card-copy mt-3 text-slate-300">
                 A personal sports hub for live scores, schedules, standings, news, scorecards, and AI-powered context.
               </p>
               <a
@@ -289,7 +289,7 @@ export function SiteShell() {
 
                 <div className="p-5">
                   <h3 className="text-xl font-bold text-white">{app.name}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-300">{app.description}</p>
+                  <p className="site-card-copy mt-2 text-slate-300">{app.description}</p>
                   <a
                     href={app.liveHref}
                     target="_blank"
@@ -319,7 +319,7 @@ export function SiteShell() {
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Notes and reflections from building, learning, and staying curious.
               </h2>
-              <p className="mt-5 text-base leading-8 text-slate-300">
+              <p className="site-section-lede mt-5 text-slate-300">
                 A few thoughts are starting to take shape. This section will slowly grow into a place for
                 writing about products, technology, work, and whatever else I find worth exploring.
               </p>
@@ -344,7 +344,7 @@ export function SiteShell() {
               >
                 <div className="text-sm font-semibold text-rose-300">0{index + 1}</div>
                 <div className="mt-3 text-xl font-bold text-white">{item.title}</div>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{item.note}</p>
+                <p className="site-meta-copy mt-3 text-slate-300">{item.note}</p>
               </Link>
             ))}
           </div>
@@ -364,7 +364,7 @@ export function SiteShell() {
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Say hello
             </h2>
-            <p className="mt-5 text-base leading-8 text-slate-300">
+            <p className="site-section-lede mt-5 text-slate-300">
               The easiest place to reach me is on LinkedIn.
             </p>
 

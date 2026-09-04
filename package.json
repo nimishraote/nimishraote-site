@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "qa:typography": "node scripts/qa-typography.mjs",
+    "build": "npm run qa:typography && next build",
     "start": "next start"
   },
   "dependencies": {

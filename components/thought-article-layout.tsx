@@ -48,7 +48,7 @@ export function ThoughtArticleLayout({
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
               {title}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">{intro}</p>
+            <p className="site-page-lede mt-6 max-w-3xl text-slate-300">{intro}</p>
           </div>
         </div>
       </section>
@@ -57,7 +57,7 @@ export function ThoughtArticleLayout({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(168,85,247,0.12),_transparent_26%),radial-gradient(circle_at_bottom_left,_rgba(56,189,248,0.10),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(251,191,36,0.09),_transparent_24%),radial-gradient(circle_at_center,_rgba(244,114,182,0.07),_transparent_28%)]" />
         <div className="relative mx-auto max-w-4xl px-5 py-16">
           <article className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.24)] backdrop-blur sm:p-8">
-            <div className="space-y-6 text-base leading-8 text-slate-300">{children}</div>
+            <div className="site-body-copy space-y-6 text-slate-300">{children}</div>
             <ReactionBar articleId={articleId} />
           </article>
         </div>
