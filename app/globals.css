@@ -26,45 +26,86 @@ a {
  * Shared supporting-text scale.
  * Keep page ledes, section ledes, body copy, card copy, and metadata distinct
  * so every page uses the same visual hierarchy instead of ad-hoc text sizes.
+ * Pixel-aligned line heights keep supporting copy feeling crisp rather than airy.
  */
 .site-page-lede {
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
+  margin-top: 1rem;
 }
 
 .site-section-lede {
-  font-size: 1.0625rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 .site-body-copy {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.625rem;
 }
 
 .site-card-copy {
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.375rem;
 }
 
 .site-meta-copy {
   font-size: 0.875rem;
-  line-height: 1.45;
+  line-height: 1.25rem;
+}
+
+/*
+ * One compact vertical rhythm for every public page section. Presentation
+ * components still own their horizontal widths; this only standardizes the
+ * oversized top/bottom whitespace that had drifted between pages.
+ */
+main > section > div.relative.mx-auto {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+main > section:first-of-type > div.relative.mx-auto {
+  padding-top: 3rem;
+  padding-bottom: 3.25rem;
+}
+
+/* Tighten the large gap between a section introduction and its first content. */
+main > section > div.relative.mx-auto > div.mt-10 {
+  margin-top: 2rem;
+}
+
+/* Keep prose readable without the loose paragraph rhythm used previously. */
+.site-body-copy > * + * {
+  margin-top: 1rem !important;
+}
+
+/* Buttons and follow-on actions should sit closer to their supporting copy. */
+.site-page-lede + div.mt-8,
+.site-section-lede + div.mt-8,
+.site-body-copy + div.mt-8 {
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 640px) {
   .site-page-lede {
-    font-size: 1.0625rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .site-section-lede {
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.5rem;
   }
 
   .site-card-copy {
     font-size: 0.875rem;
-    line-height: 1.6;
+    line-height: 1.3125rem;
+  }
+
+  main > section > div.relative.mx-auto,
+  main > section:first-of-type > div.relative.mx-auto {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
