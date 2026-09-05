@@ -42,6 +42,8 @@ check('Thoughts hero removes the previous bright blue-purple overlay', !/rgba\(5
 
 check('Complementary article hero template is defined', /\.site-article-hero\s*\{[^}]*isolation:\s*isolate;[^}]*linear-gradient\(112deg, #17213b/s.test(globals));
 check('Article hero uses concentric editorial arcs instead of halftone dots', (globals.match(/repeating-radial-gradient/g) ?? []).length >= 2 && globals.includes('rgba(220, 181, 104, 0.24)') && globals.includes('rgba(170, 70, 91, 0.25)'));
+check('Article arcs stay concentrated at the far edges like the approved mockup', /\.site-article-hero::before\s*\{[^}]*left:\s*-8%;[^}]*width:\s*24%;/s.test(globals) && /\.site-article-hero::after\s*\{[^}]*right:\s*-12%;[^}]*width:\s*36%;/s.test(globals));
+check('Article center remains visually clean', globals.includes('transparent 100%') && globals.includes('linear-gradient(112deg, #17213b 0%, #0b1121 44%, #19132a 100%)'));
 check('Article layout uses the complementary article hero', /<section className="site-article-hero relative overflow-hidden">/.test(article));
 check('Article hero no longer uses the old bright blue-purple overlay', !/rgba\(59,130,246,0\.30\).*rgba\(139,92,246,0\.24\)/s.test(article));
 

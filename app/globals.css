@@ -95,46 +95,54 @@ a {
 }
 
 /*
- * Complementary article hero. It belongs to the same bronze/burgundy visual family
- * as the Thoughts index, but swaps halftone dots for quiet concentric editorial arcs.
+ * Complementary article hero. Match the approved mockup: a clean navy center,
+ * warm bronze atmosphere at the far left, burgundy at the far right, and only
+ * a few broad editorial arcs touching the edges instead of rings spanning the hero.
  */
 .site-article-hero {
   position: relative;
   isolation: isolate;
   background:
-    radial-gradient(circle at 0% 76%, rgba(198, 155, 76, 0.18), transparent 31%),
-    radial-gradient(circle at 100% 58%, rgba(132, 49, 70, 0.19), transparent 36%),
-    linear-gradient(112deg, #17213b 0%, #0b1121 45%, #19132a 100%);
+    radial-gradient(ellipse at 0% 96%, rgba(198, 155, 76, 0.18), transparent 27%),
+    radial-gradient(ellipse at 100% 88%, rgba(132, 49, 70, 0.22), transparent 31%),
+    linear-gradient(112deg, #17213b 0%, #0b1121 44%, #19132a 100%);
 }
 
 .site-article-hero::before,
 .site-article-hero::after {
   content: "";
   position: absolute;
-  inset: 0;
   pointer-events: none;
 }
 
 .site-article-hero::before {
+  top: -44%;
+  bottom: -8%;
+  left: -8%;
+  width: 24%;
   background: repeating-radial-gradient(
-    circle at -4% 64%,
-    transparent 0 54px,
-    rgba(220, 181, 104, 0.24) 55px 56px,
-    transparent 57px 82px
+    circle at 0% 0%,
+    transparent 0 92px,
+    rgba(220, 181, 104, 0.24) 93px 94px,
+    transparent 95px 154px
   );
-  -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.84) 20%, transparent 52%);
-  mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.84) 20%, transparent 52%);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.88) 42%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.88) 42%, transparent 100%);
 }
 
 .site-article-hero::after {
+  top: 14%;
+  right: -12%;
+  bottom: -50%;
+  width: 36%;
   background: repeating-radial-gradient(
-    circle at 105% 78%,
-    transparent 0 68px,
-    rgba(170, 70, 91, 0.25) 69px 70px,
-    transparent 71px 100px
+    circle at 100% 100%,
+    transparent 0 122px,
+    rgba(170, 70, 91, 0.25) 123px 124px,
+    transparent 125px 204px
   );
-  -webkit-mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.82) 22%, transparent 55%);
-  mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.82) 22%, transparent 55%);
+  -webkit-mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.86) 38%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.86) 38%, transparent 100%);
 }
 
 .site-article-hero > * {
@@ -191,13 +199,21 @@ main > section > div.relative.mx-auto > div.mt-10 {
   }
 
   .site-article-hero::before {
-    -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.72) 18%, transparent 58%);
-    mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.72) 18%, transparent 58%);
+    top: -34%;
+    left: -24%;
+    bottom: -4%;
+    width: 50%;
+    -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.78) 34%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.78) 34%, transparent 100%);
   }
 
   .site-article-hero::after {
-    -webkit-mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.7) 18%, transparent 60%);
-    mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.7) 18%, transparent 60%);
+    top: 22%;
+    right: -30%;
+    bottom: -38%;
+    width: 58%;
+    -webkit-mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.76) 34%, transparent 100%);
+    mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.76) 34%, transparent 100%);
   }
 
   main > section > div.relative.mx-auto,
