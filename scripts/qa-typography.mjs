@@ -34,10 +34,16 @@ check('Body copy uses a compact 16px/26px scale', /\.site-body-copy\s*\{[^}]*fon
 check('Card copy uses a compact 15px/22px scale', /\.site-card-copy\s*\{[^}]*font-size:\s*0\.9375rem;[^}]*line-height:\s*1\.375rem;/s.test(globals));
 check('Metadata uses a 14px/20px scale', /\.site-meta-copy\s*\{[^}]*font-size:\s*0\.875rem;[^}]*line-height:\s*1\.25rem;/s.test(globals));
 
-check('Shared patterned hero template is defined', /\.site-pattern-hero\s*\{[^}]*isolation:\s*isolate;[^}]*linear-gradient\(135deg, #0b1020/s.test(globals));
-check('Patterned hero uses restrained bronze and burgundy edge textures', globals.includes('rgba(203, 164, 88, 0.34)') && globals.includes('rgba(130, 48, 67, 0.32)'));
+check('Shared patterned hero template is defined', /\.site-pattern-hero\s*\{[^}]*isolation:\s*isolate;[^}]*linear-gradient\(135deg, #10172a/s.test(globals));
+check('Thoughts hero carries visible bronze and burgundy edge color', globals.includes('rgba(218, 176, 88, 0.54)') && globals.includes('rgba(154, 57, 78, 0.52)'));
+check('Thoughts hero color fields are stronger without becoming bright overlays', globals.includes('rgba(185, 139, 56, 0.16)') && globals.includes('rgba(132, 43, 64, 0.17)'));
 check('Thoughts index uses the shared patterned hero template', /<section className="site-pattern-hero relative overflow-hidden">/.test(thoughts));
 check('Thoughts hero removes the previous bright blue-purple overlay', !/rgba\(59,130,246,0\.30\).*rgba\(139,92,246,0\.24\)/s.test(thoughts));
+
+check('Complementary article hero template is defined', /\.site-article-hero\s*\{[^}]*isolation:\s*isolate;[^}]*linear-gradient\(112deg, #17213b/s.test(globals));
+check('Article hero uses concentric editorial arcs instead of halftone dots', (globals.match(/repeating-radial-gradient/g) ?? []).length >= 2 && globals.includes('rgba(220, 181, 104, 0.24)') && globals.includes('rgba(170, 70, 91, 0.25)'));
+check('Article layout uses the complementary article hero', /<section className="site-article-hero relative overflow-hidden">/.test(article));
+check('Article hero no longer uses the old bright blue-purple overlay', !/rgba\(59,130,246,0\.30\).*rgba\(139,92,246,0\.24\)/s.test(article));
 
 check('Every top-level page section receives the shared compact vertical rhythm', /main > section > div\.relative\.mx-auto\s*\{[^}]*padding-top:\s*3rem;[^}]*padding-bottom:\s*3rem;/s.test(globals));
 check('Mobile section rhythm is reduced to 40px', /padding-top:\s*2\.5rem;[^}]*padding-bottom:\s*2\.5rem;/s.test(globals));
@@ -60,7 +66,7 @@ const articlePages = fs.readdirSync(thoughtRoot, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => path.join(thoughtRoot, entry.name, 'page.tsx'))
   .filter((filePath) => fs.existsSync(filePath));
-check('Every article page uses the shared article layout and therefore the shared type/spacing system', articlePages.length > 0 && articlePages.every((filePath) => /ThoughtArticleLayout/.test(read(filePath))));
+check('Every article page uses the shared article layout and therefore the shared hero/type/spacing system', articlePages.length > 0 && articlePages.every((filePath) => /ThoughtArticleLayout/.test(read(filePath))));
 
 check(
   'Legacy ad-hoc supporting-copy size/line-height pairs are removed from presentation surfaces',
