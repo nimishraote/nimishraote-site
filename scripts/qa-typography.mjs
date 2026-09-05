@@ -34,6 +34,11 @@ check('Body copy uses a compact 16px/26px scale', /\.site-body-copy\s*\{[^}]*fon
 check('Card copy uses a compact 15px/22px scale', /\.site-card-copy\s*\{[^}]*font-size:\s*0\.9375rem;[^}]*line-height:\s*1\.375rem;/s.test(globals));
 check('Metadata uses a 14px/20px scale', /\.site-meta-copy\s*\{[^}]*font-size:\s*0\.875rem;[^}]*line-height:\s*1\.25rem;/s.test(globals));
 
+check('Shared patterned hero template is defined', /\.site-pattern-hero\s*\{[^}]*isolation:\s*isolate;[^}]*linear-gradient\(135deg, #0b1020/s.test(globals));
+check('Patterned hero uses restrained bronze and burgundy edge textures', globals.includes('rgba(203, 164, 88, 0.34)') && globals.includes('rgba(130, 48, 67, 0.32)'));
+check('Thoughts index uses the shared patterned hero template', /<section className="site-pattern-hero relative overflow-hidden">/.test(thoughts));
+check('Thoughts hero removes the previous bright blue-purple overlay', !/rgba\(59,130,246,0\.30\).*rgba\(139,92,246,0\.24\)/s.test(thoughts));
+
 check('Every top-level page section receives the shared compact vertical rhythm', /main > section > div\.relative\.mx-auto\s*\{[^}]*padding-top:\s*3rem;[^}]*padding-bottom:\s*3rem;/s.test(globals));
 check('Mobile section rhythm is reduced to 40px', /padding-top:\s*2\.5rem;[^}]*padding-bottom:\s*2\.5rem;/s.test(globals));
 check('Large section-to-content gaps are capped at 32px', /main > section > div\.relative\.mx-auto > div\.mt-10\s*\{[^}]*margin-top:\s*2rem;/s.test(globals));

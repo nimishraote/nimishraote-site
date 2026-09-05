@@ -56,6 +56,51 @@ a {
 }
 
 /*
+ * Shared patterned hero template. Keep the center dark and readable while
+ * low-contrast bronze and burgundy halftone textures add depth at the edges.
+ * This is CSS-only so it can be reused on other page heroes without image assets.
+ */
+.site-pattern-hero {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 0% 18%, rgba(171, 130, 59, 0.08), transparent 29%),
+    radial-gradient(circle at 100% 24%, rgba(113, 39, 58, 0.09), transparent 31%),
+    linear-gradient(135deg, #0b1020 0%, #0a1020 56%, #121024 100%);
+}
+
+.site-pattern-hero::before,
+.site-pattern-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 34%;
+  pointer-events: none;
+  background-size: 20px 20px;
+  opacity: 0.42;
+}
+
+.site-pattern-hero::before {
+  left: 0;
+  background-image: radial-gradient(circle, rgba(203, 164, 88, 0.34) 0 1.55px, transparent 1.85px);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.9) 12%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.9) 12%, transparent 100%);
+}
+
+.site-pattern-hero::after {
+  right: 0;
+  background-image: radial-gradient(circle, rgba(130, 48, 67, 0.32) 0 1.55px, transparent 1.85px);
+  -webkit-mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.9) 12%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 0%, rgba(0, 0, 0, 0.9) 12%, transparent 100%);
+}
+
+.site-pattern-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/*
  * One compact vertical rhythm for every public page section. Presentation
  * components still own their horizontal widths; this only standardizes the
  * oversized top/bottom whitespace that had drifted between pages.
@@ -101,6 +146,13 @@ main > section > div.relative.mx-auto > div.mt-10 {
   .site-card-copy {
     font-size: 0.875rem;
     line-height: 1.3125rem;
+  }
+
+  .site-pattern-hero::before,
+  .site-pattern-hero::after {
+    width: 46%;
+    background-size: 18px 18px;
+    opacity: 0.32;
   }
 
   main > section > div.relative.mx-auto,

@@ -51,8 +51,7 @@ export default function ThoughtsPage() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-[#0b1020]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.30),_transparent_32%),radial-gradient(circle_at_top_right,_rgba(139,92,246,0.24),_transparent_28%),radial-gradient(circle_at_bottom_left,_rgba(251,146,60,0.12),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(236,72,153,0.10),_transparent_22%)]" />
+      <section className="site-pattern-hero relative overflow-hidden">
         <div className="relative mx-auto max-w-5xl px-5 pb-16 pt-16 sm:pt-20">
           <div className="max-w-4xl">
             <div className="inline-flex rounded-full border border-amber-300/20 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-amber-200">
