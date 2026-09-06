@@ -6,19 +6,19 @@ const secondaryApps = [
     name: "MoneyWise",
     description:
       "A financial literacy app for young adults, built to make money feel clearer and easier to act on.",
-    liveHref: "https://moneywise-mzo6.vercel.app/",
+    liveHref: "https://moneywise.nimishraote.com/",
   },
   {
     name: "InsightLens",
     description:
       "An AI tool that turns charts and graphs into clear takeaways and useful follow-up questions.",
-    liveHref: "https://insightlens-red.vercel.app/",
+    liveHref: "https://insightlens.nimishraote.com/",
   },
   {
     name: "You Are the COO",
     description:
       "An executive simulation built around the tradeoffs and pressure of running a company.",
-    liveHref: "https://you-are-the-coo.vercel.app/",
+    liveHref: "https://coo.nimishraote.com/",
   },
 ];
 
